@@ -20,6 +20,23 @@ def minimum_spanning_example():
 
     print g
 
+def dijkstra_fail():
+    # graph where dijkstra's fails.
+    nodes = []
+    edges = []
+    nodes.append(Node('a'))
+    nodes.append(Node('b'))
+    nodes.append(Node('c'))
+    nodes.append(Node('d'))
+
+    edges.append(Edge(nodes[0],nodes[1],4))
+    edges.append(Edge(nodes[0],nodes[2],2))
+    edges.append(Edge(nodes[1],nodes[2],-3))
+    edges.append(Edge(nodes[2],nodes[3],1))
+
+    g = DiGraph(nodes,edges)
+    print g
 
 if __name__ == "__main__":
-    minimum_spanning_example()
+    #minimum_spanning_example()
+    dijkstra_fail()
